@@ -12,3 +12,8 @@
   height: 180px;
   background-color: #d3dae1;
 }
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
