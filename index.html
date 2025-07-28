@@ -16,6 +16,10 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <title>Skydos - Travel With Us</title>
   </head>
   <body>
@@ -45,6 +49,60 @@
     </nav>
 
     <main>
+      <!-- ---modal--- -->
+      <div class="modal fade" tabindex="-1" id="booking-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Book a tour</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Your email"
+                      />
+                      <label for="email">Email address</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <select id="select1" class="form-select">
+                        <option>Bali, Indonesia - $1,200</option>
+                        <option>Cappadocia, Turkey - $1,800</option>
+                        <option>Kyoto, Japan - $1,500</option>
+                      </select>
+                      <label for="select1">Pick a tour</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- ---carousel--- -->
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -77,12 +135,16 @@
               class="d-block w-100 c-img"
               alt="..."
             />
-            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+            <div class="carousel-caption top-0 mt-4">
               <p class="fs-3 mt-5 text-uppercase">Discover The Hidden World</p>
               <h1 class="display-1 fw-bolder text-capitalize">
                 The Skydos Tours
               </h1>
-              <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+              <button
+                class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                data-bs-toggle="modal"
+                data-bs-target="#booking-modal"
+              >
                 Book a tour
               </button>
             </div>
@@ -92,13 +154,17 @@
               src="https://images.pexels.com/photos/2054396/pexels-photo-2054396.jpeg"
               class="d-block w-100 c-img"
               alt="..."
-            /> 
-            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+            />
+            <div class="carousel-caption top-0 mt-4">
               <p class="fs-3 mt-5 text-uppercase">The Season Has Arrived</p>
               <h1 class="display-1 fw-bolder text-capitalize">
                 3 available tours
               </h1>
-              <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+              <button
+                class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                data-bs-toggle="modal"
+                data-bs-target="#booking-modal"
+              >
                 Book a tour
               </button>
             </div>
@@ -109,12 +175,14 @@
               class="d-block w-100 c-img"
               alt="..."
             />
-            <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+            <div class="carousel-caption top-0 mt-4">
               <p class="fs-3 mt-5 text-uppercase">Destination Activities</p>
-              <h1 class="display-1 fw-bolder text-capitalize">
-                Get - Fly 
-              </h1>
-              <button class="btn btn-primary px-4 py-2 fs-5 mt-5">
+              <h1 class="display-1 fw-bolder text-capitalize">Get - Fly</h1>
+              <button
+                class="btn btn-primary px-4 py-2 fs-5 mt-5"
+                data-bs-toggle="modal"
+                data-bs-target="#booking-modal"
+              >
                 Book a tour
               </button>
             </div>
